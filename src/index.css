@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #07090e;
+    --bg-surface: #0e121a;
+    --bg-panel: #131824;
+    --bg-panel-elevated: #181f2f;
+    --border-subtle: #1e2638;
+    --border-highlight: #2c3852;
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-violet: #8b5cf6;
+    --accent-purple: #a855f7;
+    --text-primary: #f1f5f9;
+    --text-muted: #94a3b8;
+    --text-dim: #64748b;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars for sleek executive UI */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090c12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e273a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f3e5c;
+}
+
+/* Subtle glow effects */
+.glow-blue-sm {
+  box-shadow: 0 0 15px -3px rgba(59, 130, 246, 0.15);
+}
+
+.glow-violet-sm {
+  box-shadow: 0 0 15px -3px rgba(139, 92, 246, 0.15);
+}
+
+.glow-blue-md {
+  box-shadow: 0 0 25px -4px rgba(59, 130, 246, 0.25);
+}
+
+.glass-panel {
+  background: rgba(19, 24, 36, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  body:has(.print-only-document) #root {
+    display: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-modal-root {
+    position: static !important;
+    inset: auto !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    display: block !important;
+  }
+  .print-only-document {
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

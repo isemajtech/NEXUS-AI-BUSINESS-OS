@@ -1,0 +1,6 @@
+{
+  "name": "Personal AI Business OS",
+  "description": "A private, dark-themed AI-powered business management and automation platform for controlling multiple ventures, AI departments, products, and workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
